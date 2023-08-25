@@ -14,5 +14,5 @@ public interface UserRepository {
 
     Optional<User> findById(long id);
 
-    User save(User userEntity);
+    User save(User user);
 }

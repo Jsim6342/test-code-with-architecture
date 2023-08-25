@@ -1,4 +1,4 @@
-package com.example.demo.user.service;
+package com.example.demo.medium;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
@@ -11,6 +11,7 @@ import com.example.demo.user.domain.UserStatus;
 import com.example.demo.user.domain.UserCreateDto;
 import com.example.demo.user.domain.UserUpdateDto;
 import com.example.demo.user.infrastructure.UserEntity;
+import com.example.demo.user.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.mockito.BDDMockito;
 import org.springframework.beans.factory.annotation.Autowired;
