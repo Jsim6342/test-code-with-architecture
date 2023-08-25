@@ -5,11 +5,12 @@ import com.example.demo.common.domain.exception.ResourceNotFoundException;
 import com.example.demo.user.domain.UserStatus;
 import com.example.demo.user.domain.UserCreateDto;
 import com.example.demo.user.domain.UserUpdateDto;
-import com.example.demo.user.repository.UserEntity;
-import com.example.demo.user.repository.UserRepository;
+import com.example.demo.user.infrastructure.UserEntity;
+import com.example.demo.user.infrastructure.UserJpaRepository;
 import java.time.Clock;
 import java.util.UUID;
 
+import com.example.demo.user.service.port.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
