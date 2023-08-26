@@ -5,16 +5,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class CertificationServiceImplTest {
+public class CertificationServiceTest {
 
     @Test
     public void 이메일과_컨텐츠가_제대로_만들어져서_보내지는지_테스트한다() {
         // given
         FakeMailSender fakeMailSender = new FakeMailSender();
-        CertificationServiceImpl certificationServiceImpl = new CertificationServiceImpl(fakeMailSender);
+        CertificationService certificationService = new CertificationService(fakeMailSender);
 
         // when
-        certificationServiceImpl.send("test@email.com", 1, "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa");
+        certificationService.send("test@email.com", 1, "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa");
 
         // then
         assertThat(fakeMailSender.email).isEqualTo("test@email.com");
